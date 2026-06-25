@@ -26,7 +26,6 @@ class Profil(models.Model):
                 img.thumbnail(output_size)
                 img.save(self.foto.path)
 
-
 class ProfilDurum(models.Model):
     user_profil = models.ForeignKey(Profil, on_delete=models.CASCADE)
     durum_mesaji = models.CharField(max_length=240)
