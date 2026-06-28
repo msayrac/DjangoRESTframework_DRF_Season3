@@ -1,10 +1,21 @@
-from django.urls import path
-from profiller.api import views
+from django.urls import path, include
+from profiller.api.views import ProfilViewSet
+from rest_framework.routers import DefaultRouter
 
+router = DefaultRouter()
+router.register(r'kullanici-profilleri', ProfilViewSet)
 
-urlpatterns = [
-    path('kullanici-profilleri/', views.ProfilList.as_view(), name='profiller' ),
+urlpatterns = [    
+    path('', include(router.urls)),
+   
 ]
 
+# profil_list = ProfilViewSet.as_view({'get':'list'})
+# profil_detail = ProfilViewSet.as_view({'get':'retrieve'})
 
+
+# urlpatterns = [    
+#     path('kullanici-profilleri/', profil_list, name='profiller'),
+#     path('kullanici-profilleri/<int:pk>/', profil_detail, name='profil-detay' ),
+# ]
 
