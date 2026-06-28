@@ -37,11 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'profiller.apps.ProfillerConfig',
     'rest_framework',
     'rest_framework.authtoken',
     'dj_rest_auth',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'django.contrib.sites',
+    'dj_rest_auth.registration',
     'django_extensions',
 
 ]
@@ -54,6 +58,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -133,6 +138,10 @@ REST_FRAMEWORK = {
     ]
 }
 
+
+SITE_ID = 1
+ACCOUNT_EMAIL_VERIFICATION ='none'
+ACCOUNT_EMAIL_REQUIRED = (True,)
 
 
 

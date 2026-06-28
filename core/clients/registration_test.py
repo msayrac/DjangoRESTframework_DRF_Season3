@@ -3,13 +3,15 @@ from pprint import pprint
 
 def client():
     credentials = {
-        'username':'testuser',
-        'password':'Admin1234.'
+        'username':'testuserrest3',
+        'email':'testuserrest@gmail.com',
+        'password1':'Admin1234.',
+        'password2':'Admin1234.'
 
     }
 
     response = requests.post(
-        url='http://127.0.0.1:8000/api/rest-auth/login/', #/api/rest-auth/registration/
+        url='http://127.0.0.1:8000/api/rest-auth/registration/', #/api/rest-auth/registration/
         data=credentials,
     )
 
@@ -19,6 +21,8 @@ def client():
 
 if __name__ == '__main__':
     client()
+
+
 
 
 

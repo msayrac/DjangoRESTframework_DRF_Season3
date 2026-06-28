@@ -2,7 +2,7 @@ import requests
 from pprint import pprint
 
 def client():
-    token = 'Token 43bd243dae3f5072d8db527ade1541a746320260'
+    token = 'Token abc8de44343871938e76881924383cb9c9291693'
 
     headers = {
         'Authorization': token,

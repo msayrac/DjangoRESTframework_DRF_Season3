@@ -6,3 +6,5 @@ urlpatterns = [
     path('kullanici-profilleri/', views.ProfilList.as_view(), name='profiller' ),
 ]
 
+
+
