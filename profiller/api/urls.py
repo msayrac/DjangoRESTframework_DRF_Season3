@@ -3,7 +3,7 @@ from profiller.api.views import ProfilViewSet
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
-router.register(r'kullanici-profilleri', ProfilViewSet)
+router.register(r'profiller', ProfilViewSet)
 
 urlpatterns = [    
     path('', include(router.urls)),
